@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public abstract class Material
+    public abstract class Material :Persistente<Material>
     {
         private string Codigo { get; set; }
         private string Titulo { get; set; }
@@ -17,5 +17,10 @@ namespace Dominio
         private List<Persona>Direccion { get; set; }
         private Genero Genero { get; set; }
 
+
+        public bool Validar()
+        {
+            return !string.IsNullOrEmpty(Codigo);
+        }
     }
 }

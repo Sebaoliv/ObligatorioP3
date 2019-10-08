@@ -10,12 +10,13 @@ namespace Dominio.Repositorios
     {
         public bool Add(Genero gen)
         {
-            throw new NotImplementedException();
+            return gen != null && gen.Validar() && gen.Insertar();
+            
         }
 
         public bool Delete(Genero gen)
         {
-            throw new NotImplementedException();
+            return gen != null && gen.Validar() && gen.Eliminar();
         }
 
         public IEnumerable<Genero> FindAll()
@@ -35,7 +36,7 @@ namespace Dominio.Repositorios
 
         public bool Update(Genero gen)
         {
-            throw new NotImplementedException();
+            return gen != null && gen.Validar() && gen.Modificar();
         }
     }
 }

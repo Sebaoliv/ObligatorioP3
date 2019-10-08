@@ -10,12 +10,12 @@ namespace Dominio.Repositorios
     {
         public bool Add(Usuario usr)
         {
-            throw new NotImplementedException();
+            return usr.Validar() && usr.Insertar();
         }
 
         public bool Delete(Usuario usr)
         {
-            throw new NotImplementedException();
+            return usr.Validar() && usr.Modificar();
         }
 
         public IEnumerable<Usuario> FindAll()
@@ -35,7 +35,7 @@ namespace Dominio.Repositorios
 
         public bool Update(Usuario usr)
         {
-            throw new NotImplementedException();
+            return usr.Validar() && usr.Modificar();
         }
     }
 }

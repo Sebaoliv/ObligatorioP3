@@ -10,12 +10,12 @@ namespace Dominio.Repositorios
     {
         public bool Add(Material mat)
         {
-            throw new NotImplementedException();
+            return mat.Validar() && mat.Insertar();
         }
 
         public bool Delete(Material mat)
         {
-            throw new NotImplementedException();
+            return mat.Validar() && mat.Eliminar();
         }
 
         public IEnumerable<Material> FindAll()
@@ -35,7 +35,7 @@ namespace Dominio.Repositorios
 
         public bool Update(Material mat)
         {
-            throw new NotImplementedException();
+            return mat.Validar() && mat.Modificar();
         }
     }
 }

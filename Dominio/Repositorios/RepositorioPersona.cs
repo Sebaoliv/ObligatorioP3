@@ -10,12 +10,12 @@ namespace Dominio.Repositorios
     {
         public bool Add(Persona per)
         {
-            throw new NotImplementedException();
+            return per.Validar() && per.Insertar();
         }
 
         public bool Delete(Persona per)
         {
-            throw new NotImplementedException();
+            return per.Validar() && per.Eliminar();
         }
 
         public IEnumerable<Persona> FindAll()
@@ -35,7 +35,7 @@ namespace Dominio.Repositorios
 
         public bool Update(Persona per)
         {
-            throw new NotImplementedException();
+            return per.Validar() && per.Modificar();
         }
     }
 }
